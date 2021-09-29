@@ -44,22 +44,21 @@ mouseH4.addEventListener('mouseleave', function(event) {
 
 
 // keydown
-// const busImage = document.querySelector('.intro img')
-// // console.log(busImage)
-
-// document.addEventListener('keydown', escKey);
-
-// function escKey(event) {
-//   if(event.key === 'Escape'){
-//     busImage.classList.add('off')
-//   }
-// }
-
-
-// onclick
-const btn = document.querySelector('.btn');
-btn.addEventListener('onclick', function(event){
-  console.log('This is a button!');
-})
+const busImage = document.querySelector('.intro img')
+// console.log(busImage)
+function escKey(event) {
+  if(event.key === 'Escape'){
+    console.log('hello');
+    busImage.style.display = 'none';
+  }
 }
+document.addEventListener('keydown', escKey);
+
+
+Array.from(document.links).forEach(link => {
+  link.addEventListener('click', function(event){
+    event.preventDefault();
+  })
+})
+
 
